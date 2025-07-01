@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplyGen Lite - AI Email Reply Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-reply"></i>
+                ReplyGen Lite
+            </a>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Generate Perfect Email Replies</h1>
+            <p>Paste any email and get an AI-powered reply in your preferred tone. Professional, friendly, or apologetic - we've got you covered.</p>
+        </section>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <form id="replyForm">
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="emailInput" class="form-label">
+                        <i class="fas fa-envelope"></i> Paste the email you received
+                    </label>
+                    <textarea 
+                        id="emailInput" 
+                        class="email-input" 
+                        placeholder="Paste the email you want to reply to here...
+
+For example:
+Hi John,
+
+I hope this email finds you well. I wanted to follow up on our meeting last week regarding the project timeline. Could we schedule a call this week to discuss the next steps?
+
+Best regards,
+Sarah"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Tone Selector -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <i class="fas fa-palette"></i> Select Reply Tone
+                    </label>
+                    <div class="tone-selector">
+                        <div class="tone-option active" data-tone="friendly">
+                            <i class="fas fa-smile"></i>
+                            Friendly
+                        </div>
+                        <div class="tone-option" data-tone="formal">
+                            <i class="fas fa-tie"></i>
+                            Formal
+                        </div>
+                        <div class="tone-option" data-tone="apologetic">
+                            <i class="fas fa-heart"></i>
+                            Apologetic
+                        </div>
+                        <div class="tone-option" data-tone="enthusiastic">
+                            <i class="fas fa-star"></i>
+                            Enthusiastic
+                        </div>
+                        <div class="tone-option" data-tone="brief">
+                            <i class="fas fa-bolt"></i>
+                            Brief
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generate Button -->
+                <button type="submit" class="generate-btn" id="generateBtn">
+                    <i class="fas fa-spinner loading"></i>
+                    <span class="btn-text">
+                        <i class="fas fa-magic"></i> Generate Reply
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Container -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <h3 class="result-title">
+                    <i class="fas fa-check-circle"></i> Your Generated Reply
+                </h3>
+                <div class="action-buttons">
+                    <button class="copy-btn" id="copyBtn">
+                        <i class="fas fa-copy"></i>
+                        <span class="copy-text">Copy Reply</span>
+                    </button>
+                    <button class="download-btn" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        <span>Download</span>
+                    </button>
+                </div>
+            </div>
+            <div class="reply-output" id="replyOutput"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">
+                © 2025 ReplyGen Lite. Crafted with ❤️ for better communication.
+            </p>
+        </div>
+    </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
