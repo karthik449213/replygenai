@@ -32,16 +32,16 @@
         const OPENROUTER_API_KEY = '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'; // Replace with your actual API key
         
         // API Configuration
-        const API_CONFIG = {
-            baseUrl: 'https://openrouter.ai/api/v1/chat/completions',
-            model: 'openai/gpt-3.5-turbo', // You can change this to other models like 'openai/gpt-4' or 'meta-llama/llama-2-7b-chat'
-            headers: {
-                'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-                'Content-Type': 'application/json',
-                'HTTP-Referer': window.location.origin, // Required by OpenRouter
-                'X-Title': 'ReplyGen Lite' // Optional: helps with usage analytics
-            }
-        };
+     const API_CONFIG = {
+    baseUrl: 'https://openrouter.ai/api/v1/chat/completions',
+    model: 'deepseek-ai/deepseek-chat', // ✅ DeepSeek model
+    headers: {
+        'Authorization': `Bearer ${OPENROUTER_API_KEY}`, // ✅ Use your OpenRouter API key
+        'Content-Type': 'application/json',
+        'HTTP-Referer': window.location.origin, // ✅ Required by OpenRouter
+        'X-Title': 'ReplyGen Lite - DeepSeek' // Optional
+    }
+};
 
         // Tone-specific prompts for better AI responses
         const tonePrompts = {
