@@ -29,7 +29,7 @@
 
         // ===== PRODUCTION CONFIGURATION =====
         // 🔑 ADD YOUR OPENROUTER API KEY HERE
-        const OPENROUTER_API_KEY = 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; // Replace with your actual API key
+        const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY; // Replace with your actual API key
         
         // API Configuration
      const API_CONFIG = {
